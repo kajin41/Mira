@@ -10,7 +10,7 @@ nav_items = ['app', 'join', 'about', 'partners', 'contact']
 
 @app.route('/')
 def index():
-    return render_template("home3.html", title="Mira Saves", nav_items=nav_items)
+    return render_template("home3.html", title="MiraSaves", nav_items=nav_items)
 
 
 @app.route('/signup', methods=["POST"])
