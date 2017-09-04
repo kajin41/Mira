@@ -59,26 +59,26 @@ hr.star-skill {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #555;
+  background-color: #7DAFD3;
   color: white;
 }
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: black;
 }
 hr.star-primary:after {
   background-color: white;
-  color: #2C3E50;
-}
-hr.star-skill:after {
-  background-color: #660000;
-  color: #fff;
+  color: black;
 }
 .img-centered {
   margin: 0 auto;
 }
 header {
   text-align: center;
-  background: #012f8f;
+  background: white;
+  color: #7DAFD3;
+}
+.bg-light{
+  background: #7DAFD3;
   color: white;
 }
 header .container {
@@ -113,11 +113,11 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #012f8f;
+  background: white;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border-bottom: solid #fffd8e 5px;
+  border-bottom: solid #B3D4E2 5px;
 }
 .navbar-custom a:focus {
   outline: none;
@@ -135,16 +135,16 @@ header .intro-text .skills {
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
-  color: white;
+  color: #B3D4E2;
 }
 .navbar-custom .navbar-nav {
   letter-spacing: 1px;
 }
 .navbar-custom .navbar-nav li a {
-  color: white;
+  color: #B3D4E2;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #2C3E50;
+  color: #7DAFD3;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -153,13 +153,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #09c3fc;
+  background: #7DAFD3;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #09c3fc;
+  background: #7DAFD3;
 }
 .navbar-custom .navbar-toggle {
   color: white;
