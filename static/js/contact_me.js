@@ -8,7 +8,7 @@ function doc_join(){
 function patient_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
-            event.preventDefault();
+            //event.preventDefault();
             grecaptcha.execute();
 
             // get values from FORM
@@ -58,7 +58,7 @@ function patient_submit() {
         function doctor_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
-            event.preventDefault();
+            //event.preventDefault();
             grecaptcha.execute();
 
 
@@ -109,7 +109,7 @@ function patient_submit() {
         function contact_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
-            event.preventDefault();
+            //event.preventDefault();
             grecaptcha.execute();
 
 
@@ -167,7 +167,7 @@ $(function() {
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: patient_submit($form, event),
+        submitSuccess: patient_submit(),
         filter: function() {
             return $(this).is(":visible");
         },
@@ -180,7 +180,7 @@ $(function() {
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: doctor_submit($form, event),
+        submitSuccess: doctor_submit(),
         filter: function() {
             return $(this).is(":visible");
         },
@@ -192,7 +192,7 @@ $(function() {
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: contact_submit($form, event),
+        submitSuccess: contact_submit(),
         filter: function() {
             return $(this).is(":visible");
         },
