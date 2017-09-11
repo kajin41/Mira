@@ -5,18 +5,12 @@ function doc_join(){
     $("#doctorForm").show()
 }
 
-$(function() {
-
-    $("#patientForm input,#patientForm textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
+function patient_submit($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
-            
+            grecaptcha.execute();
+
             // get values from FORM
             var name = $("input#patientname").val();
             var email = $("input#patientemail").val();
@@ -59,21 +53,14 @@ $(function() {
                     $('#patientForm').trigger("reset");
                 },
             });
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
+        }
 
-    $("#doctorForm input,#doctorForm textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
+        function doctor_submit($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
+            grecaptcha.execute();
+
 
             // get values from FORM
             var name = $("input#doctorname").val();
@@ -117,21 +104,14 @@ $(function() {
                     $('#doctorForm').trigger("reset");
                 },
             });
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
+        }
 
-        $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
+        function contact_submit($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
+            grecaptcha.execute();
+
 
             // get values from FORM
             var name = $("input#name").val();
@@ -178,7 +158,41 @@ $(function() {
                     $('#contactForm').trigger("reset");
                 },
             });
+        }
+
+$(function() {
+
+    $("#patientForm input,#patientForm textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
         },
+        submitSuccess: patient_submut($form, event),
+        filter: function() {
+            return $(this).is(":visible");
+        },
+    });
+
+
+
+    $("#doctorForm input,#doctorForm textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
+        },
+        submitSuccess: doctor_submit($form, event),
+        filter: function() {
+            return $(this).is(":visible");
+        },
+    });
+
+
+        $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
+        },
+        submitSuccess: contact_submit($form, event),
         filter: function() {
             return $(this).is(":visible");
         },
