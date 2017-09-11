@@ -5,7 +5,7 @@ function doc_join(){
     $("#doctorForm").show()
 }
 
-$(function recapcall() {
+function recapcall() {
 
     $("#patientForm input,#patientForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -193,4 +193,4 @@ $(function recapcall() {
 // When clicking on Full hide fail/success boxes
 $('#name').focus(function() {
     $('#success').html('');
-});
+}
