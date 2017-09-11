@@ -167,7 +167,7 @@ $(function() {
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: patient_submut($form, event),
+        submitSuccess: patient_submit($form, event),
         filter: function() {
             return $(this).is(":visible");
         },
