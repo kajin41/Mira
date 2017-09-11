@@ -5,7 +5,7 @@ function doc_join(){
     $("#doctorForm").show()
 }
 
-function patient_submit($form, event) {
+function patient_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
@@ -55,7 +55,7 @@ function patient_submit($form, event) {
             });
         }
 
-        function doctor_submit($form, event) {
+        function doctor_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
@@ -106,7 +106,7 @@ function patient_submit($form, event) {
             });
         }
 
-        function contact_submit($form, event) {
+        function contact_submit() {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
