@@ -14,7 +14,15 @@
     <link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script type="text/javascript">
+    var CaptchaCallback = function() {
+        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
+        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
+        grecaptcha.render('RecaptchaField3', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
+    };
+</script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer'></script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +40,6 @@
 
   ga('create', 'UA-105906619-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
