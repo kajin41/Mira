@@ -5,7 +5,7 @@ function doc_join(){
     $("#doctorForm").show()
 }
 
-function recapcall() {
+function() {
 
     $("#patientForm input,#patientForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -31,7 +31,8 @@ function recapcall() {
                 data: {
                     name: name,
                     email: email,
-                    type: 'patient'
+                    type: 'patient',
+                    'g-recaptcha-response': grecaptcha.getResponse()
                 },
                 cache: false,
                 success: function() {
@@ -89,7 +90,8 @@ function recapcall() {
                 data: {
                     name: name,
                     email: email,
-                    type: 'doctor'
+                    type: 'doctor',
+                    'g-recaptcha-response': grecaptcha.getResponse()
                 },
                 cache: false,
                 success: function() {
@@ -151,6 +153,7 @@ function recapcall() {
                     email: email,
                     subject: subject,
                     message: message,
+                    'g-recaptcha-response': grecaptcha.getResponse()
                 },
                 cache: false,
                 success: function() {
