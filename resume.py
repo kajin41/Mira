@@ -20,7 +20,7 @@ def index():
 def patient_signup():
     r = requests.post('https://www.google.com/recaptcha/api/siteverify',
                       data={'secret': config.captcha_secret_key,
-                            'response': request.form['g-recaptcha-response'],
+                            'response': request.form['g_recaptcha_response'],
                             'remoteip': request.headers['X-Forwarded-For']})
 
     google_response = json.loads(r.text)

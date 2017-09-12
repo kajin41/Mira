@@ -17,9 +17,10 @@
 
     <script type="text/javascript">
     var CaptchaCallback = function() {
-        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
-        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
-        grecaptcha.render('RecaptchaField3', {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
+        $('.g-recaptcha').each(function(index, el) {
+          var widgetId = grecaptcha.render(el, {'sitekey' : '6Lc-STAUAAAAAD7uRBc_9nk8kU5JgoOPVChs5UkS'});
+            jQuery(this).attr('data-widget-id', widgetId);
+        });
     };
 </script>
     <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
